@@ -36,7 +36,7 @@ import com.android.internal.app.AlertController;
 
 public class ChangeLog extends AlertActivity {
 
-    private static final String CHANGELOG_PATH = "/system/etc/CHANGELOG-SALVAGE.txt";
+    private static final String CHANGELOG_PATH = "/system/etc/CHANGELOG-Salvage-Mod.txt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
