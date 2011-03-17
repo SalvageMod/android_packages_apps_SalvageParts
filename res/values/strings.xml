@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Generic -->
+    <string name="app_name">SalvageMod settings</string>
+
+    <!--  Primary Screen Settings -->
+    <string name="interface_settings_title_head">Interface</string>
+    <string name="interface_settings_title_subhead">Interface settings</string>
+    <string name="interface_settings_summary_head">Interface tweaks, overscrolling, render effect</string>
+    <string name="system_settings_title_head">System</string>
+    <string name="system_settings_title_subhead">System settings</string>
+    <string name="system_settings_summary_head">System changelog, stats, update notifications</string>
+
+    <!-- User interface -->
+    <string name="ui_title">User interface</string>
+    <string name="ui_summary">User interface settings &amp; tweaks</string>
+
+    <!-- User interface : Overscroll -->
+    <string name="ui_overscroll_title">Overscrolling</string>
+    <string name="pref_overscroll_title">Overscroll effect</string>
+    <string name="pref_overscroll_summary">Choose how scrollable objects look when they overshoot</string>
+    <string name="pref_overscroll_weight_title">Overscrolling weight</string>
+    <string name="pref_overscroll_weight_summary">Select the weight of the scrollable objects</string>
+
+    <!-- General strings -->
+    <string name="general_title">General</string>
+
+    <!-- Change Log strings -->
+    <string name="changelog_title">View changelog</string>
+    <string name="changelog_dialog">Changelog</string>
+    <string name="changelog_loading">Loading changelog...</string>
+    <string name="changelog_error">Error loading changelog...</string>
+    <string name="changelog_unknown">Unknown</string>
+    <string name="changelog_version">Version</string>
+</resources>
