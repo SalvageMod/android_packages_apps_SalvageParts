@@ -6,10 +6,10 @@
     <!--  Primary Screen Settings -->
     <string name="interface_settings_title_head">Interface</string>
     <string name="interface_settings_title_subhead">Interface settings</string>
-    <string name="interface_settings_summary_head">Interface tweaks, overscrolling, render effect</string>
+    <string name="interface_settings_summary_head">Interface tweaks, overscrolling</string>
     <string name="system_settings_title_head">System</string>
     <string name="system_settings_title_subhead">System settings</string>
-    <string name="system_settings_summary_head">System changelog, stats, update notifications</string>
+    <string name="system_settings_summary_head">System changelog</string>
 
     <!-- User interface -->
     <string name="ui_title">User interface</string>
