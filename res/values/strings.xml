@@ -9,7 +9,7 @@
     <string name="interface_settings_summary_head">Interface tweaks, overscrolling</string>
     <string name="system_settings_title_head">System</string>
     <string name="system_settings_title_subhead">System settings</string>
-    <string name="system_settings_summary_head">System changelog</string>
+    <string name="system_settings_summary_head">CPU Freq and changelog</string>
 
     <!-- User interface -->
     <string name="ui_title">User interface</string>
