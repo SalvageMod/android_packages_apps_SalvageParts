@@ -32,4 +32,17 @@
     <string name="changelog_error">Error loading changelog...</string>
     <string name="changelog_unknown">Unknown</string>
     <string name="changelog_version">Version</string>
+
+	<string name="cpu_settings_title">CPU settings</string>
+    <string name="cpu_title">CPU settings</string>
+    <string name="cpu_summary">Governor and clock settings</string>
+    <string name="cpu_governors_title">Available governors</string>
+    <string name="cpu_governors_summary">List of available governors\nCurrently selected: %S</string>
+    <string name="cpu_min_freq_title">Min CPU frequency</string>
+    <string name="cpu_min_freq_summary">Minimum CPU frequency\nCurrently: %s</string>
+    <string name="cpu_max_freq_title">Max CPU frequency</string>
+    <string name="cpu_max_freq_summary">Maximum CPU frequency\nCurrently: %s</string>
+    <string name="cpu_set_on_boot">Set on boot</string>
+    <string name="cpu_set_on_boot_summary">Restore CPU settings on boot</string>
+
 </resources>
