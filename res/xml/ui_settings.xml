@@ -6,6 +6,13 @@
         android:title="@string/general_title">
     </PreferenceCategory>
 
+	<PreferenceScreen android:key="ui_power_widget_settings_menu"
+	    android:title="@string/title_expanded_widget">
+		<intent android:action="android.intent.action.MAIN"
+			android:targetPackage="com.salvagemod.salvageparts"
+			android:targetClass="com.salvagemod.salvageparts.activities.UIPowerWidgetActivity" />
+	</PreferenceScreen>
+
     <PreferenceCategory android:title="@string/ui_overscroll_title">
         <ListPreference android:key="pref_overscroll_effect"
             android:dialogTitle="@string/pref_overscroll_title"
