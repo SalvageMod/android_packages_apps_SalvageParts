@@ -4,16 +4,19 @@
     <string name="app_name">SalvageMod settings</string>
 
     <!--  Primary Screen Settings -->
-    <string name="interface_settings_title_head">Interface</string>
+    <string name="interface_settings_title_head">User interface</string>
     <string name="interface_settings_title_subhead">Interface settings</string>
-    <string name="interface_settings_summary_head">Interface tweaks, overscrolling</string>
-    <string name="system_settings_title_head">System</string>
-    <string name="system_settings_title_subhead">System settings</string>
-    <string name="system_settings_summary_head">CPU Freq and changelog</string>
+    <string name="interface_settings_summary_head">Notification widgets, overscrolling</string>
+    <string name="system_settings_title_head">Mod information</string>
+    <string name="system_settings_title_subhead">Mod information</string>
+    <string name="system_settings_summary_head">Changelog</string>
+    <string name="performance_settings_title_head">Performance settings</string>
+    <string name="performance_settings_summary_head">Adjust CPU settings</string>
 
     <!-- User interface -->
     <string name="ui_title">User interface</string>
     <string name="ui_summary">User interface settings &amp; tweaks</string>
+    <string name="ui_statusbar_title">Status bar settings</string>
 
     <!-- User interface : Overscroll -->
     <string name="ui_overscroll_title">Overscrolling</string>
@@ -22,9 +25,12 @@
     <string name="pref_overscroll_weight_title">Overscrolling weight</string>
     <string name="pref_overscroll_weight_summary">Select the weight of the scrollable objects</string>
 
+    <string name="performance_cpu_title">CPU settings</string>
+
     <!-- Expanded View Power Widget -->
     <string name="title_widget_buttons">Expanded View Widget</string>
-    <string name="title_expanded_widget">Notification power widget</string>
+    <string name="title_expanded_widget">Notification widgets</string>
+    <string name="expanded_widget_summary">Enable and modify notification bar toggles</string>
     <string name="summary_expanded_widget">Use the expanded views power widget</string>
     <string name="title_expanded_hide_onchange">Hide on change</string>
     <string name="summary_expanded_hide_onchange">Hide the notification pulldown after toggling a widget button</string>
@@ -81,10 +87,10 @@
     <string name="changelog_unknown">Unknown</string>
     <string name="changelog_version">Version</string>
 
-	<string name="cpu_settings_title">CPU settings</string>
-    <string name="cpu_title">CPU settings</string>
+	<string name="cpu_settings_title">Performance settings</string>
+    <string name="cpu_title">Performance settings</string>
     <string name="cpu_summary">Governor and clock settings</string>
-    <string name="cpu_governors_title">Available governors</string>
+    <string name="cpu_governors_title">CPU governors</string>
     <string name="cpu_governors_summary">List of available governors\nCurrently selected: %S</string>
     <string name="cpu_min_freq_title">Min CPU frequency</string>
     <string name="cpu_min_freq_summary">Minimum CPU frequency\nCurrently: %s</string>

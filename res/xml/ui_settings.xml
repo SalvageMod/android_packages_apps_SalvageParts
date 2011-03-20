@@ -3,11 +3,12 @@
 
     <!-- General settings -->
     <PreferenceCategory android:key="general_category"
-        android:title="@string/general_title">
+        android:title="@string/ui_statusbar_title">
     </PreferenceCategory>
 
 	<PreferenceScreen android:key="ui_power_widget_settings_menu"
-	    android:title="@string/title_expanded_widget">
+	    android:title="@string/title_expanded_widget"
+            android:summary="@string/expanded_widget_summary">
 		<intent android:action="android.intent.action.MAIN"
 			android:targetPackage="com.salvagemod.salvageparts"
 			android:targetClass="com.salvagemod.salvageparts.activities.UIPowerWidgetActivity" />

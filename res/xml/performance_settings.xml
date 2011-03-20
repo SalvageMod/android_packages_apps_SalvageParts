@@ -3,16 +3,15 @@
 
     <!-- General settings -->
     <PreferenceCategory android:key="general_category"
-        android:title="@string/general_title">
-
-        <!-- Change Log -->
-        <PreferenceScreen android:key="changelog"
-            android:title="@string/changelog_title">
+        android:title="@string/ui_statusbar_title">
+    </PreferenceCategory>
+  
+        <PreferenceScreen android:key="cpu_settings" 
+            android:title="@string/cpu_title" 
+            android:summary="@string/cpu_summary">
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.salvagemod.salvageparts"
-                android:targetClass="com.salvagemod.salvageparts.activities.ChangeLog" />
+                android:targetClass="com.salvagemod.salvageparts.activities.PerformanceActivity" />
         </PreferenceScreen>
-
-    </PreferenceCategory>
 
 </PreferenceScreen>

@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
     <application android:label="@string/app_name"
-        android:icon="@drawable/cm_icon">
+        android:icon="@drawable/icon">
         
         <receiver android:name=".intents.CPUReceiver" android:enabled="true">
             <intent-filter>
@@ -81,7 +81,7 @@
             </intent-filter>
         </activity>
         
-        <activity android:name=".activities.CPUActivity"
+        <activity android:name=".activities.PerformanceActivity"
             android:label="@string/cpu_settings_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

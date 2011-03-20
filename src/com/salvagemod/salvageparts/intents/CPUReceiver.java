@@ -16,7 +16,7 @@
 
 package com.salvagemod.salvageparts.intents;
 
-import com.salvagemod.salvageparts.activities.CPUActivity;
+import com.salvagemod.salvageparts.activities.PerformanceActivity;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -49,31 +49,31 @@ public class CPUReceiver extends BroadcastReceiver {
     private void configureCPU(Context ctx) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
 
-        if (prefs.getBoolean(CPUActivity.SOB_PREF, false) == false) {
+        if (prefs.getBoolean(PerformanceActivity.SOB_PREF, false) == false) {
             Log.i(TAG, "Restore disabled by user preference.");
             return;
         }
 
-        String governor = prefs.getString(CPUActivity.GOV_PREF, null);
-        String minFrequency = prefs.getString(CPUActivity.MIN_FREQ_PREF, null);
-        String maxFrequency = prefs.getString(CPUActivity.MAX_FREQ_PREF, null);
+        String governor = prefs.getString(PerformanceActivity.GOV_PREF, null);
+        String minFrequency = prefs.getString(PerformanceActivity.MIN_FREQ_PREF, null);
+        String maxFrequency = prefs.getString(PerformanceActivity.MAX_FREQ_PREF, null);
         boolean noSettings = (governor == null) && (minFrequency == null) && (maxFrequency == null);
 
         if (noSettings) {
             Log.d(TAG, "No settings saved. Nothing to restore.");
         } else {
-            List<String> governors = Arrays.asList(CPUActivity.readOneLine(
-                    CPUActivity.GOVERNORS_LIST_FILE).split(" "));
-            List<String> frequencies = Arrays.asList(CPUActivity.readOneLine(
-                    CPUActivity.FREQ_LIST_FILE).split(" "));
+            List<String> governors = Arrays.asList(PerformanceActivity.readOneLine(
+                    PerformanceActivity.GOVERNORS_LIST_FILE).split(" "));
+            List<String> frequencies = Arrays.asList(PerformanceActivity.readOneLine(
+                    PerformanceActivity.FREQ_LIST_FILE).split(" "));
             if (governor != null && governors.contains(governor)) {
-                CPUActivity.writeOneLine(CPUActivity.GOVERNOR, governor);
+                PerformanceActivity.writeOneLine(PerformanceActivity.GOVERNOR, governor);
             }
             if (maxFrequency != null && frequencies.contains(maxFrequency)) {
-                CPUActivity.writeOneLine(CPUActivity.FREQ_MAX_FILE, maxFrequency);
+                PerformanceActivity.writeOneLine(PerformanceActivity.FREQ_MAX_FILE, maxFrequency);
             }
             if (minFrequency != null && frequencies.contains(minFrequency)) {
-                CPUActivity.writeOneLine(CPUActivity.FREQ_MIN_FILE, minFrequency);
+                PerformanceActivity.writeOneLine(PerformanceActivity.FREQ_MIN_FILE, minFrequency);
             }
             Log.d(TAG, "CPU settings restored.");
         }

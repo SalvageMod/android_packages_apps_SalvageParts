@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+  <PreferenceCategory android:title="@string/performance_cpu_title">
   <ListPreference android:key="pref_cpu_gov" android:dialogTitle="@string/cpu_governors_title"
                   android:title="@string/cpu_governors_title" />
 
@@ -12,5 +13,6 @@
 
   <CheckBoxPreference android:key="pref_set_on_boot"
                       android:title="@string/cpu_set_on_boot" android:summary="@string/cpu_set_on_boot_summary"/>
+    </PreferenceCategory>
 
 </PreferenceScreen>

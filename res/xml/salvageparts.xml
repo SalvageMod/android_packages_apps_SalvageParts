@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <!-- Interface Settings -->
     <PreferenceScreen android:key="ui_settings"
         android:title="@string/interface_settings_title_head" android:summary="@string/interface_settings_summary_head">
         <intent android:action="android.intent.action.MAIN"
             android:targetPackage="com.salvagemod.salvageparts"
             android:targetClass="com.salvagemod.salvageparts.activities.UIActivity" />
+    </PreferenceScreen>
+
+    <!-- Performance Settings -->
+    <PreferenceScreen android:key="performance_settings"
+        android:title="@string/performance_settings_title_head"
+        android:summary="@string/performance_settings_summary_head">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.salvagemod.salvageparts"
+            android:targetClass="com.salvagemod.salvageparts.activities.PerformanceActivity" />
     </PreferenceScreen>
 
     <!-- System Settings -->
