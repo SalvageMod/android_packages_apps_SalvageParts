@@ -28,6 +28,7 @@ import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
+import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
@@ -54,7 +55,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private ListPreference mOverscrollPref;
     private ListPreference mOverscrollWeightPref;
    
-    private ListPreference mLcddPref;
+    private EditTextPreference mLcddPref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -81,8 +82,8 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mOverscrollWeightPref.setOnPreferenceChangeListener(this);
 
    	/* LCD Density Changer */
-	mLcddPref = (ListPreference) prefSet.findPreference(LCDD_PREF);
-        mLcddPref.setValue(SystemProperties.get(LCDD_PROP,
+	mLcddPref = (EditTextPreference) prefSet.findPreference(LCDD_PREF);
+        mLcddPref.setText(SystemProperties.get(LCDD_PROP,
                 SystemProperties.get(LCDD_PERSIST_PROP, LCDD_DEFAULT)));
         mLcddPref.setOnPreferenceChangeListener(this); 
 

@@ -119,15 +119,4 @@
 	 <item>64m</item>
     </string-array>
 
-    <string-array name="entries_lcdd">
-        <item>170</item>
-        <item>180</item>
-        <item>190</item>
-        <item>200</item>
-        <item>210</item>
-        <item>220</item>
-        <item>230</item>
-        <item>240</item>
-    </string-array>
-
 </resources>
