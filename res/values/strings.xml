@@ -30,7 +30,11 @@
     <string name="pref_lcdd_title">LCD Density Size</string>
     <string name="pref_lcdd_summary">Change the density your LCD displays (requires reboot)</string>
 
-    <string name="performance_cpu_title">CPU settings</string>
+    <!-- Performace Settings: CPU Settings  -->
+    <string name="performance_cpu_title">CPU Settings</string>
+    <string name="pref_dialogtitle_cpu_settings">CPU Settings</string>
+    <string name="pref_dialogsummary_cpu_settings">Adjust the CPU settings like: Governors &amp; Min/Max Frequency</string>
+    
 
     <!-- Performance Settings : VM Heap Size -->
     <string name="ui_heapsize_title">VM Heap Settings</string>
