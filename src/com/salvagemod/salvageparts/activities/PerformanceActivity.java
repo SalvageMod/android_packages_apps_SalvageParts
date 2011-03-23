@@ -78,7 +78,7 @@ public class PerformanceActivity extends PreferenceActivity implements
         }
 
         setTitle(R.string.cpu_title);
-        addPreferencesFromResource(R.xml.cpu_settings);
+        addPreferencesFromResource(R.xml.performance_settings);
 
         PreferenceScreen PrefScreen = getPreferenceScreen();
 
