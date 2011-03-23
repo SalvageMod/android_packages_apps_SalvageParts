@@ -19,10 +19,14 @@ package com.salvagemod.salvageparts.activities;
 import com.salvagemod.salvageparts.R;
 
 import android.os.Bundle;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
+import android.os.SystemProperties;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -46,7 +50,13 @@ public class PerformanceActivity extends PreferenceActivity implements
     public static final String FREQ_MIN_FILE = "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq";
     public static final String SOB_PREF = "pref_set_on_boot";
 
+    private static final String HEAPSIZE_PREF = "pref_heapsize";
+    private static final String HEAPSIZE_PROP = "dalvik.vm.heapsize";
+    private static final String HEAPSIZE_PERSIST_PROP = "persist.sys.vm.heapsize";
+    private static final String HEAPSIZE_DEFAULT = "16m";
     private static final String TAG = "CPUSettings";
+
+    private ListPreference mHeapsizePref;
 
     private String mGovernorFormat;
     private String mMinFrequencyFormat;
@@ -81,6 +91,7 @@ public class PerformanceActivity extends PreferenceActivity implements
         addPreferencesFromResource(R.xml.performance_settings);
 
         PreferenceScreen PrefScreen = getPreferenceScreen();
+        PreferenceScreen prefSet = getPreferenceScreen();
 
         temp = readOneLine(GOVERNOR);
 
@@ -108,6 +119,11 @@ public class PerformanceActivity extends PreferenceActivity implements
         mMaxFrequencyPref.setValue(temp);
         mMaxFrequencyPref.setSummary(String.format(mMaxFrequencyFormat, toMHz(temp)));
         mMaxFrequencyPref.setOnPreferenceChangeListener(this);
+
+        mHeapsizePref = (ListPreference) prefSet.findPreference(HEAPSIZE_PREF);
+        mHeapsizePref.setValue(SystemProperties.get(HEAPSIZE_PERSIST_PROP,
+                SystemProperties.get(HEAPSIZE_PROP, HEAPSIZE_DEFAULT)));
+        mHeapsizePref.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -129,8 +145,14 @@ public class PerformanceActivity extends PreferenceActivity implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        String fname = "";
+        if (preference == mHeapsizePref) {
+            if (newValue != null) {
+                SystemProperties.set(HEAPSIZE_PERSIST_PROP, (String)newValue);
+                return true;
+            }
+        }
 
+	String fname = "";
         if (newValue != null) {
             if (preference == mGovernorPref) {
                 fname = GOVERNOR;
