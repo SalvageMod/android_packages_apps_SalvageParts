@@ -37,7 +37,8 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 
-public class UIActivity extends PreferenceActivity implements OnPreferenceChangeListener {
+public class UIActivity extends PreferenceActivity implements 
+OnPreferenceChangeListener {
 
     /* Preference Screens */
 
@@ -46,16 +47,24 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     /* Other */
 
     private static final String OVERSCROLL_PREF = "pref_overscroll_effect";
-    private static final String OVERSCROLL_WEIGHT_PREF = "pref_overscroll_weight";
+    private static final String OVERSCROLL_WEIGHT_PREF = 
+"pref_overscroll_weight";
     private static final String LCDD_PREF = "pref_lcdd";
     private static final String LCDD_PROP = "ro.sf.lcd_density";
     private static final String LCDD_PERSIST_PROP = "persist.sys.lcd_density";
     private static final String LCDD_DEFAULT = "240";
+    private static final String ELECTRON_BEAM_ANIMATION_ON = 
+"electron_beam_animation_on";
+    private static final String ELECTRON_BEAM_ANIMATION_OFF = 
+"electron_beam_animation_off";
 
     private ListPreference mOverscrollPref;
     private ListPreference mOverscrollWeightPref;
    
     private EditTextPreference mLcddPref;
+
+    private CheckBoxPreference mElectronBeamAnimationOn;
+    private CheckBoxPreference mElectronBeamAnimationOff;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,17 +78,40 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         /* Preference Screens */
 
         /* Overscroll Effect */
-        mOverscrollPref = (ListPreference) prefSet.findPreference(OVERSCROLL_PREF);
+        mOverscrollPref = (ListPreference) 
+prefSet.findPreference(OVERSCROLL_PREF);
         int overscrollEffect = Settings.System.getInt(getContentResolver(),
                 Settings.System.OVERSCROLL_EFFECT, 1);
         mOverscrollPref.setValue(String.valueOf(overscrollEffect));
         mOverscrollPref.setOnPreferenceChangeListener(this);
 
-        mOverscrollWeightPref = (ListPreference) prefSet.findPreference(OVERSCROLL_WEIGHT_PREF);
+        mOverscrollWeightPref = (ListPreference) 
+prefSet.findPreference(OVERSCROLL_WEIGHT_PREF);
         int overscrollWeight = Settings.System.getInt(getContentResolver(),
                 Settings.System.OVERSCROLL_WEIGHT, 5);
         mOverscrollWeightPref.setValue(String.valueOf(overscrollWeight));
         mOverscrollWeightPref.setOnPreferenceChangeListener(this);
+
+        /* Electron Beam control */
+        boolean animateScreenLights = getResources().getBoolean(
+                com.android.internal.R.bool.config_animateScreenLights);
+        mElectronBeamAnimationOn = 
+(CheckBoxPreference)prefSet.findPreference(ELECTRON_BEAM_ANIMATION_ON);
+        
+mElectronBeamAnimationOn.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.ELECTRON_BEAM_ANIMATION_ON, 0) == 1);
+        mElectronBeamAnimationOff = 
+(CheckBoxPreference)prefSet.findPreference(ELECTRON_BEAM_ANIMATION_OFF);
+        
+mElectronBeamAnimationOff.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.ELECTRON_BEAM_ANIMATION_OFF, 1) == 1);
+
+        /* Hide Electron Beam controls if electron beam is disabled */
+        if (animateScreenLights) {
+            prefSet.removePreference(mElectronBeamAnimationOn);
+            prefSet.removePreference(mElectronBeamAnimationOff);
+
+        }
 
    	/* LCD Density Changer */
 	mLcddPref = (EditTextPreference) prefSet.findPreference(LCDD_PREF);
@@ -99,16 +131,37 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         }
 	if (preference == mOverscrollPref) {
             int overscrollEffect = Integer.valueOf((String) newValue);
-            Settings.System.putInt(getContentResolver(), Settings.System.OVERSCROLL_EFFECT,
+            Settings.System.putInt(getContentResolver(), 
+Settings.System.OVERSCROLL_EFFECT,
                     overscrollEffect);
             return true;
         }
         if (preference == mOverscrollWeightPref) {
             int overscrollWeight = Integer.valueOf((String) newValue);
-            Settings.System.putInt(getContentResolver(), Settings.System.OVERSCROLL_WEIGHT,
+            Settings.System.putInt(getContentResolver(), 
+Settings.System.OVERSCROLL_WEIGHT,
                     overscrollWeight);
          return true;
         }
         return false;
 	}
+	
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, 
+Preference preference) {
+        boolean value;
+        if (preference == mElectronBeamAnimationOn) {
+            value = mElectronBeamAnimationOn.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.ELECTRON_BEAM_ANIMATION_ON, value ? 1 : 0);
+        }
+
+        if (preference == mElectronBeamAnimationOff) {
+            value = mElectronBeamAnimationOff.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.ELECTRON_BEAM_ANIMATION_OFF, value ? 1 : 
+0);
+        }
+
+        return true;
+    }
 }

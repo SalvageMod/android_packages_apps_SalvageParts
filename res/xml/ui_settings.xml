@@ -29,6 +29,15 @@
             android:entryValues="@array/values_overscroll_weight" />
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/pref_electron_beam_title">
+
+        <CheckBoxPreference android:key="electron_beam_animation_on"
+            android:title="@string/pref_electron_beam_animation_on" />
+	
+        <CheckBoxPreference android:key="electron_beam_animation_off"
+            android:title="@string/pref_electron_beam_animation_off" />
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/ui_lcdd_title">
        <EditTextPreference 
 	    android:key="pref_lcdd"

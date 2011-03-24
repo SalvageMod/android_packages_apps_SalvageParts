@@ -25,6 +25,11 @@
     <string name="pref_overscroll_weight_title">Overscrolling weight</string>
     <string name="pref_overscroll_weight_summary">Select the weight of the scrollable objects</string>
 
+    <!-- Electron Beam Animation -->
+    <string name="pref_electron_beam_title">Screen On/Off Animation</string>
+    <string name="pref_electron_beam_animation_on">Screen-on animation</string>
+    <string name="pref_electron_beam_animation_off">Screen-off animation</string>
+
     <!-- User Interface : LCD Density Changer -->
     <string name="ui_lcdd_title">LCD Density</string>
     <string name="pref_lcdd_title">LCD Density Size</string>
