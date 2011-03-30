@@ -25,11 +25,6 @@
     <string name="pref_overscroll_weight_title">Overscrolling weight</string>
     <string name="pref_overscroll_weight_summary">Select the weight of the scrollable objects</string>
 
-    <!-- User Interface : LCD Density Changer -->
-    <string name="ui_lcdd_title">LCD Density</string>
-    <string name="pref_lcdd_title">LCD Density Size</string>
-    <string name="pref_lcdd_summary">Change the density your LCD displays (requires reboot)</string>
-
     <!-- Performace Settings: CPU Settings  -->
     <string name="performance_cpu_title">CPU Settings</string>
     <string name="pref_dialogtitle_cpu_settings">CPU Settings</string>

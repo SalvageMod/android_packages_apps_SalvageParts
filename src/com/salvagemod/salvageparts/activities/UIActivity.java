@@ -46,15 +46,9 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 
     private static final String OVERSCROLL_PREF = "pref_overscroll_effect";
     private static final String OVERSCROLL_WEIGHT_PREF = "pref_overscroll_weight";
-    private static final String LCDD_PREF = "pref_lcdd";
-    private static final String LCDD_PROP = "ro.sf.lcd_density";
-    private static final String LCDD_PERSIST_PROP = "persist.sys.lcd_density";
-    private static final String LCDD_DEFAULT = "240";
 
     private ListPreference mOverscrollPref;
     private ListPreference mOverscrollWeightPref;
-   
-    private ListPreference mLcddPref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -80,22 +74,10 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mOverscrollWeightPref.setValue(String.valueOf(overscrollWeight));
         mOverscrollWeightPref.setOnPreferenceChangeListener(this);
 
-   	/* LCD Density Changer */
-	mLcddPref = (ListPreference) prefSet.findPreference(LCDD_PREF);
-        mLcddPref.setValue(SystemProperties.get(LCDD_PROP,
-                SystemProperties.get(LCDD_PERSIST_PROP, LCDD_DEFAULT)));
-        mLcddPref.setOnPreferenceChangeListener(this); 
-
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mLcddPref) {
-            if (newValue != null) {
-                SystemProperties.set(LCDD_PERSIST_PROP, (String)newValue);
-        return true;
-	    }
-        }
 	if (preference == mOverscrollPref) {
             int overscrollEffect = Integer.valueOf((String) newValue);
             Settings.System.putInt(getContentResolver(), Settings.System.OVERSCROLL_EFFECT,

@@ -29,11 +29,4 @@
             android:entryValues="@array/values_overscroll_weight" />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/ui_lcdd_title">
-       <ListPreference android:key="pref_lcdd"
-            android:dialogTitle="@string/pref_lcdd_title"
-            android:title="@string/pref_lcdd_title" android:summary="@string/pref_lcdd_summary"
-            android:entries="@array/entries_lcdd"
-            android:entryValues="@array/entries_lcdd" />
-    </PreferenceCategory>
 </PreferenceScreen>
