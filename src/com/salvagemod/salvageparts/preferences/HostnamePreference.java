@@ -1,4 +1,4 @@
-package com.android.settings;
+package com.salvagemod.salvageparts.preferences;
 
 import android.content.Context;
 import android.os.SystemProperties;
