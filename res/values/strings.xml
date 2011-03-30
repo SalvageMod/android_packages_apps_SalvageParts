@@ -88,6 +88,11 @@
     <string name="title_color_picker">Pick a color</string>
     <string name="msg_color_picker">Tap on center color to confirm.\nPress back to cancel</string>
 
+    <!-- Device Hostname strings -->
+    <string name="device_hostname">Device hostname</string>
+    <string name="hostname_save">Save</string>
+    <string name="hostname_cancel">Cancel</string>
+
     <!-- Change Log strings -->
     <string name="changelog_title">View changelog</string>
     <string name="changelog_dialog">Changelog</string>
