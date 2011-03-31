@@ -47,8 +47,16 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
     private static final String OVERSCROLL_PREF = "pref_overscroll_effect";
     private static final String OVERSCROLL_WEIGHT_PREF = "pref_overscroll_weight";
 
+    private static final String ELECTRON_BEAM_ANIMATION_ON = "electron_beam_animation_on";
+
+    private static final String ELECTRON_BEAM_ANIMATION_OFF = "electron_beam_animation_off";
+
     private ListPreference mOverscrollPref;
     private ListPreference mOverscrollWeightPref;
+
+    private CheckBoxPreference mElectronBeamAnimationOn;
+
+    private CheckBoxPreference mElectronBeamAnimationOff;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -74,6 +82,40 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mOverscrollWeightPref.setValue(String.valueOf(overscrollWeight));
         mOverscrollWeightPref.setOnPreferenceChangeListener(this);
 
+        /* Electron Beam control */
+        boolean animateScreenLights = getResources().getBoolean(
+                com.android.internal.R.bool.config_animateScreenLights);
+        mElectronBeamAnimationOn = (CheckBoxPreference)prefSet.findPreference(ELECTRON_BEAM_ANIMATION_ON);
+        mElectronBeamAnimationOn.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.ELECTRON_BEAM_ANIMATION_ON, 0) == 1);
+        mElectronBeamAnimationOff = (CheckBoxPreference)prefSet.findPreference(ELECTRON_BEAM_ANIMATION_OFF);
+        mElectronBeamAnimationOff.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.ELECTRON_BEAM_ANIMATION_OFF, 1) == 1);
+
+        /* Hide Electron Beam controls if electron beam is disabled */
+        if (animateScreenLights) {
+            prefSet.removePreference(mElectronBeamAnimationOn);
+            prefSet.removePreference(mElectronBeamAnimationOff);
+        }
+    }
+
+
+   public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+       boolean value;    
+
+        if (preference == mElectronBeamAnimationOn) {
+            value = mElectronBeamAnimationOn.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.ELECTRON_BEAM_ANIMATION_ON, value ? 1 : 0);
+        }
+
+        if (preference == mElectronBeamAnimationOff) {
+            value = mElectronBeamAnimationOff.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.ELECTRON_BEAM_ANIMATION_OFF, value ? 1 : 0);
+        }
+
+        return false;
     }
 
     @Override
@@ -93,3 +135,4 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         return false;
 	}
 }
+
