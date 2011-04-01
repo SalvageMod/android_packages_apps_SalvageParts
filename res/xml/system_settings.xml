@@ -5,6 +5,12 @@
     <PreferenceCategory android:key="general_category"
         android:title="@string/general_title">
 
+        <!-- Nightly Disclaimer -->
+        <PreferenceScreen
+	    android:title="@string/nightly_title"
+            android:summary="@string/nightly_disclaimer">
+        </PreferenceScreen>
+
         <!-- Device Hostname -->
         <com.salvagemod.salvageparts.preferences.HostnamePreference
             android:key="device_hostname"
