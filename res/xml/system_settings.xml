@@ -3,13 +3,38 @@
 
     <!-- General settings -->
     <PreferenceCategory android:key="general_category"
-        android:title="@string/general_title">
+        android:title="@string/mod_info_category">
+
+    <!-- Header Image -->
+    <PreferenceScreen
+        android:layout="@layout/mod_info_header">
+    </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <!-- Build information category -->
+    <PreferenceCategory
+        android:title="@string/build_info_category">
 
         <!-- Nightly Disclaimer -->
         <PreferenceScreen
 	    android:title="@string/nightly_title"
             android:summary="@string/nightly_disclaimer">
         </PreferenceScreen>
+
+        <!-- Change Log -->
+        <PreferenceScreen android:key="changelog"
+            android:title="@string/changelog_title">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.salvagemod.salvageparts"
+                android:targetClass="com.salvagemod.salvageparts.activities.ChangeLog" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+  <!-- Device information category -->
+    <PreferenceCategory
+        android:title="@string/device_info_category">
 
         <!-- Device Hostname -->
         <com.salvagemod.salvageparts.preferences.HostnamePreference
@@ -22,14 +47,6 @@
             android:imeOptions="actionDone"
             android:inputType="text"
             android:persistent="false" />
-
-        <!-- Change Log -->
-        <PreferenceScreen android:key="changelog"
-            android:title="@string/changelog_title">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.salvagemod.salvageparts"
-                android:targetClass="com.salvagemod.salvageparts.activities.ChangeLog" />
-        </PreferenceScreen>
 
     </PreferenceCategory>
 
