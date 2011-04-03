@@ -3,7 +3,7 @@
 
     <!-- General settings -->
     <PreferenceCategory android:key="general_category"
-        android:title="@string/mod_info_category">
+        android:title="@string/mod_info_main">
 
     <!-- Header Image -->
     <PreferenceScreen

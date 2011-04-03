@@ -108,8 +108,12 @@
     <string name="changelog_version">Version</string>
     <string name="nightly_title">SalvageMod Nightly</string>
     <string name="nightly_disclaimer">You are running what is considered to be an unstable nightly build of SalvageMod. There may be bugs! Please dont report bugs for these builds.</string>
+    <string name="mod_info_main">About ROM</string>
+    <string name="mod_info_header">Mod information</string>
+    <string name="build_info_category">Build information</string>
+    <string name="device_info_category">Device information</string>
 
-	<string name="cpu_settings_title">Performance settings</string>
+    <string name="cpu_settings_title">Performance settings</string>
     <string name="cpu_title">Performance settings</string>
     <string name="cpu_summary">Governor and clock settings</string>
     <string name="cpu_governors_title">CPU governors</string>
