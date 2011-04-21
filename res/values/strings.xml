@@ -125,4 +125,19 @@
     <string name="cpu_set_on_boot">Set on boot</string>
     <string name="cpu_set_on_boot_summary">Restore CPU settings on boot</string>
 
+    <!-- Lockscreen Settings -->
+    <string name="lockscreen_settings_title_head">Lockscreen</string>
+    <string name="lockscreen_settings_title_subhead">Lockscreen settings</string>
+    <string name="lockscreen_settings_title">Lockscreen settings</string>
+    <string name="pref_lockscreen_music_controls_title">Lockscreen music controls</string>
+    <string name="pref_lockscreen_music_controls_summary">Displays music controls on the lockscreen</string>
+    <string name="pref_lockscreen_now_playing_title">Display song name</string>
+    <string name="pref_lockscreen_now_playing_summary">Display the name and artist of the song currently playing</string>
+    <string name="pref_lockscreen_album_art_title">Display album art</string>
+    <string name="pref_lockscreen_album_art_summary">Display the album art of the current song. Only works with stock music player in portrait mode</string>
+    <string name="pref_lockscreen_music_headset_title">Display music controls with headset</string>
+    <string name="pref_lockscreen_music_headset_summary">Display music controls when a wired headset and/or Bluetooth A2DP headset is connected</string>
+    <string name="pref_lockscreen_always_music_controls_title">Always display music controls</string>
+    <string name="pref_lockscreen_always_music_controls_summary">Display music controls regardless of whether or not music is playing</string>
+
 </resources>
