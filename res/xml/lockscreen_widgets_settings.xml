@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Some spacing -->
+    <PreferenceCategory />
+
+    <!-- Note -->
+    <Preference android:title="@string/lockscreen_widgets_note_title"
+        android:summary="@string/lockscreen_widgets_note_summary" android:selectable="false" />
+
+    <PreferenceCategory android:title="@string/general_title">
+
+        <CheckBoxPreference android:key="lockscreen_always_battery"
+            android:title="@string/pref_lockscreen_always_battery_title"
+            android:summary="@string/pref_lockscreen_always_battery_summary" />
+
+        <CheckBoxPreference android:key="lockscreen_music_controls"
+            android:title="@string/pref_lockscreen_music_controls_title"
+            android:summary="@string/pref_lockscreen_music_controls_summary" />
+
+        <CheckBoxPreference android:key="pref_lockscreen_now_playing"
+            android:title="@string/pref_lockscreen_now_playing_title"
+            android:summary="@string/pref_lockscreen_now_playing_summary"
+            android:dependency="lockscreen_music_controls" />
+
+        <CheckBoxPreference android:key="pref_lockscreen_album_art"
+            android:title="@string/pref_lockscreen_album_art_title"
+            android:summary="@string/pref_lockscreen_album_art_summary"
+            android:dependency="lockscreen_music_controls" />
+
+        <ListPreference android:key="pref_lockscreen_music_headset"
+            android:dependency="lockscreen_music_controls"
+            android:dialogTitle="@string/pref_lockscreen_music_headset_title"
+            android:title="@string/pref_lockscreen_music_headset_title"
+            android:summary="@string/pref_lockscreen_music_headset_summary"
+            android:entries="@array/pref_lockscreen_music_headset_entries"
+            android:entryValues="@array/pref_lockscreen_music_headset_values" />
+
+        <CheckBoxPreference android:key="lockscreen_always_music_controls"
+            android:dependency="lockscreen_music_controls"
+            android:title="@string/pref_lockscreen_always_music_controls_title"
+            android:summary="@string/pref_lockscreen_always_music_controls_summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
