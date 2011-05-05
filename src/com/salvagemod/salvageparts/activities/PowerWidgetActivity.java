@@ -17,7 +17,7 @@
 package com.salvagemod.salvageparts.activities;
 
 import com.android.internal.telephony.Phone;
-import com.android.wimax.WimaxConstants;
+// import com.android.wimax.WimaxConstants;
 import com.salvagemod.salvageparts.R;
 import com.salvagemod.salvageparts.utils.PowerWidgetUtil;
 
@@ -89,9 +89,9 @@ public class PowerWidgetActivity extends PreferenceActivity implements OnPrefere
         ArrayList<String> buttonList = PowerWidgetUtil.getButtonListFromString(PowerWidgetUtil.getCurrentButtons(this));
 
         // Don't show WiMAX option if not supported
-        if (!WimaxConstants.isWimaxSupported(this)) {
-            PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_WIMAX);
-        }
+//        if (!WimaxConstants.isWimaxSupported(this)) {
+//            PowerWidgetUtil.BUTTONS.remove(PowerWidgetUtil.BUTTON_WIMAX);
+//        }
 
         // fill that checkbox map!
         for(PowerWidgetUtil.ButtonInfo button : PowerWidgetUtil.BUTTONS.values()) {
@@ -141,10 +141,10 @@ public class PowerWidgetActivity extends PreferenceActivity implements OnPrefere
                         cb.setEnabled(false);
                         break;
                 }
-            } else if (PowerWidgetUtil.BUTTON_WIMAX.equals(button.getId())) {
-                if (!WimaxConstants.isWimaxSupported(this)) {
-                    cb.setEnabled(false);
-                }
+//            } else if (PowerWidgetUtil.BUTTON_WIMAX.equals(button.getId())) {
+//                if (!WimaxConstants.isWimaxSupported(this)) {
+//                    cb.setEnabled(false);
+//                }
             }
 
             // add to the category
