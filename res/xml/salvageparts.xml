@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:key="parent">
 
     <!-- Interface Settings -->
-    <PreferenceScreen android:key="ui_settings"
-        android:title="@string/interface_settings_title_head" android:summary="@string/interface_settings_summary_head">
-        <intent android:action="android.intent.action.MAIN"
+    <PreferenceScreen
+	android:key="ui_settings"
+        android:title="@string/interface_settings_title_head" 
+	android:summary="@string/interface_settings_summary_head" >
+        <intent 
+	    android:action="android.intent.action.MAIN"
             android:targetPackage="com.salvagemod.salvageparts"
             android:targetClass="com.salvagemod.salvageparts.activities.UIActivity" />
     </PreferenceScreen>
 
+    <!-- Lockscreen settings -->
+    <PreferenceScreen
+	android:key="lockscreen_settings"
+	android:title="@string/lockscreen_settings_title_subhead"
+	android:summary="@string/lockscreen_settings_summary_head">
+	<intent android:action="android.intent.action.MAIN"
+	    android:targetPackage="com.salvagemod.salvageparts"
+	    android:targetClass="com.salvagemod.salvageparts.activities.LockscreenActivity" />
+    </PreferenceScreen>
+
     <!-- Performance Settings -->
-    <PreferenceScreen android:key="performance_settings"
+    <PreferenceScreen
+	android:key="performance_settings"
         android:title="@string/performance_settings_title_head"
         android:summary="@string/performance_settings_summary_head">
         <intent android:action="android.intent.action.MAIN"
@@ -19,13 +35,16 @@
             android:targetClass="com.salvagemod.salvageparts.activities.PerformanceActivity" />
     </PreferenceScreen>
 
-    <!-- System Settings -->
-    <PreferenceScreen android:key="system_settings"
-        android:title="@string/system_settings_title_head"
-        android:summary="@string/system_settings_summary_head">
-        <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.salvagemod.salvageparts"
-            android:targetClass="com.salvagemod.salvageparts.activities.SystemActivity" />
+
+    <!-- Terminal Emulator -->
+    <PreferenceScreen
+	android:key="term_emu"
+	android:title="@string/term_emu_title"
+	android:summary="@string/term_emu_sum">
+	<intent android:action="android.intent.action.MAIN"
+	    android:targetPackage="com.android.term"
+	    android:targetClass="com.android.term.Term" />
     </PreferenceScreen>
+
 
 </PreferenceScreen>

@@ -12,6 +12,8 @@
     <string name="system_settings_summary_head">Changelog</string>
     <string name="performance_settings_title_head">Performance settings</string>
     <string name="performance_settings_summary_head">Adjust CPU settings</string>
+    <string name="term_emu_title">Terminal emulator</string>
+    <string name="term_emu_sum">A terminal emulator for Android</string>
 
     <!-- User interface -->
     <string name="ui_title">User interface</string>

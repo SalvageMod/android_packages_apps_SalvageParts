@@ -14,7 +14,5 @@ public class MainActivity extends PreferenceActivity {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.salvageparts);
-/*        findPreference("changelog").setSummary(getString(R.string.changelog_version) + ": " +
-            SystemProperties.get("ro.modversion", getResources().getString(R.string.changelog_unknown)));*/
     }
 }
