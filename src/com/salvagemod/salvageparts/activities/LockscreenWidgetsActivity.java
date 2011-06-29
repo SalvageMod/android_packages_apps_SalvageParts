@@ -34,7 +34,7 @@ public class LockscreenWidgetsActivity extends PreferenceActivity implements
 
     private static final String LOCKSCREEN_NOW_PLAYING = "pref_lockscreen_now_playing";
 
-    private static final String LOCKSCREEN_ALBUM_ART = "pref_lockscreen_album_art";
+//    private static final String LOCKSCREEN_ALBUM_ART = "pref_lockscreen_album_art";
 
     private static final String LOCKSCREEN_MUSIC_CONTROLS_HEADSET = "pref_lockscreen_music_headset";
 
@@ -46,7 +46,7 @@ public class LockscreenWidgetsActivity extends PreferenceActivity implements
 
     private CheckBoxPreference mNowPlayingPref;
 
-    private CheckBoxPreference mAlbumArtPref;
+//    private CheckBoxPreference mAlbumArtPref;
 
     private CheckBoxPreference mAlwaysMusicControlPref;
 
@@ -74,9 +74,9 @@ public class LockscreenWidgetsActivity extends PreferenceActivity implements
                 Settings.System.LOCKSCREEN_NOW_PLAYING, 1) == 1);
 
         /* Album Art */
-        mAlbumArtPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_ALBUM_ART);
-        mAlbumArtPref.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.LOCKSCREEN_ALBUM_ART, 1) == 1);
+//        mAlbumArtPref = (CheckBoxPreference) prefSet.findPreference(LOCKSCREEN_ALBUM_ART);
+//        mAlbumArtPref.setChecked(Settings.System.getInt(getContentResolver(),
+//                Settings.System.LOCKSCREEN_ALBUM_ART, 1) == 1);
 
         /* Show Music Controls with Headset */
         mLockscreenMusicHeadsetPref = (ListPreference) prefSet
@@ -112,11 +112,11 @@ public class LockscreenWidgetsActivity extends PreferenceActivity implements
             Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_NOW_PLAYING,
                     value ? 1 : 0);
             return true;
-        } else if (preference == mAlbumArtPref) {
-            value = mAlbumArtPref.isChecked();
-            Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_ALBUM_ART,
-                    value ? 1 : 0);
-            return true;
+//        } else if (preference == mAlbumArtPref) {
+//            value = mAlbumArtPref.isChecked();
+//            Settings.System.putInt(getContentResolver(), Settings.System.LOCKSCREEN_ALBUM_ART,
+//                    value ? 1 : 0);
+//            return true;
         } else if (preference == mAlwaysMusicControlPref) {
             value = mAlwaysMusicControlPref.isChecked();
             Settings.System.putInt(getContentResolver(),
