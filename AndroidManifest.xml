@@ -62,20 +62,6 @@
                 <category android:name="com.salvagemod.salvageparts.SHORTCUT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LockscreenUnlockActivity"
-            android:label="@string/pref_lockscreen_unlock_title">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="com.salvagemod.salvageparts.SHORTCUT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.LockscreenTimeoutActivity"
-            android:label="@string/pref_lockscreen_timeout_title">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="com.salvagemod.salvageparts.SHORTCUT" />
-            </intent-filter>
-        </activity>
         <activity android:name=".activities.UIPowerWidgetActivity"
             android:label="@string/title_expanded_widget">
             <intent-filter>

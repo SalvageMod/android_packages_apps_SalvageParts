@@ -132,19 +132,10 @@
     <string name="lockscreen_settings_title_subhead">Lockscreen settings</string>
     <string name="lockscreen_settings_summary_head">Lockscreen gestures, style, unlock options</string>
     <string name="ui_lockscreen_title">Screen lock settings</string>
-    <string name="pref_lockscreen_delay_title">Delay</string>
-    <string name="pref_lockscreen_timeout_lock_delay">Screen timeout delay</string>
-    <string name="pref_lockscreen_screenoff_lock_delay">Screen turned off delay</string>
-    <string name="pref_lockscreen_timeout_lock_delay_summary">How long to delay before enabling screen lock when screen times out</string>
-    <string name="pref_lockscreen_screenoff_lock_delay_summary">How long to delay before enabling screen lock when screen is turned off</string>
     <string name="pref_lockscreen_stylecfg_title">Style options</string>
     <string name="pref_lockscreen_stylecfg_summary">Configure the lockscreen style and the corresponding settings</string>
     <string name="pref_lockscreen_widgets_title">Widget options</string>
     <string name="pref_lockscreen_widgets_summary">Enable or disable various widgets on the lockscreen</string>
-    <string name="pref_lockscreen_unlock_title">Unlock options</string>
-    <string name="pref_lockscreen_unlock_summary">Controls button unlocking and quick unlock</string>
-    <string name="pref_lockscreen_timeout_title">Delay and timeout</string>
-    <string name="pref_lockscreen_timeout_summary">Configure screen timeout delay and screen turn off delay</string>
     <string name="lockscreen_settings_title">Lockscreen settings</string>
     <string name="pref_lockscreen_always_battery_title">Always display battery status</string>
     <string name="pref_lockscreen_always_battery_summary">Display battery status on the lockscreen at all times</string>
@@ -158,8 +149,6 @@
     <string name="pref_lockscreen_music_headset_summary">Display music controls when a wired headset and/or Bluetooth A2DP headset is connected</string>
     <string name="pref_lockscreen_always_music_controls_title">Always display music controls</string>
     <string name="pref_lockscreen_always_music_controls_summary">Display music controls regardless of whether or not music is playing</string>
-    <string name="pref_menu_unlock_title">Menu unlock</string>
-    <string name="pref_menu_unlock_summary">Pressing the menu button unlocks the device</string>
     <string name="pref_lockscreen_quick_unlock_control_title">Quick Unlock</string>
     <string name="pref_lockscreen_quick_unlock_control_summary">No need to press OK when entering Pin or Password. Delete counts as bad try</string>
     <string name="pref_lockscreen_custom_app_toggle_title">Custom app starter</string>
@@ -181,12 +170,6 @@
     <string name="pref_cambtn_music_controls_summary">Toggle play/pause when long-pressing the camera button while screen off</string>
     <string name="lockscreen_widgets_note_title">Note</string>
     <string name="lockscreen_widgets_note_summary">Choosing minimalistic lense style hides all widgets except music control. Yet below options are not unset to allow easy switching to other styles</string>
-    <string name="pref_lockscreen_disable_unlock_tab">Disable unlock slider</string>
-    <string name="pref_lockscreen_disable_unlock_tab_summary">Note: You need to enable trackball, menu key, or gesture unlocking before this option becomes available</string>
-    <string name="pref_trackball_wake_title">Trackball wake</string>
-    <string name="pref_trackball_wake_summary">Pressing the trackball wakes the device</string>
-    <string name="pref_trackball_unlock_title">Trackball unlock</string>
-    <string name="pref_trackball_unlock_summary">Pressing the trackball unlocks the device</string>
 
     <string name="select_custom_app_title">Select custom application</string>
     <string name="group_applications">Applications</string>

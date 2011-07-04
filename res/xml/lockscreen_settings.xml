@@ -20,22 +20,6 @@
                 android:targetClass="com.salvagemod.salvageparts.activities.LockscreenWidgetsActivity" />
         </PreferenceScreen>
 
-        <PreferenceScreen android:key="lockscreen_unlock"
-            android:title="@string/pref_lockscreen_unlock_title"
-            android:summary="@string/pref_lockscreen_unlock_summary">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.salvagemod.salvageparts"
-                android:targetClass="com.salvagemod.salvageparts.activities.LockscreenUnlockActivity" />
-        </PreferenceScreen>
-
-        <PreferenceScreen android:key="lockscreen_timeout"
-            android:title="@string/pref_lockscreen_timeout_title"
-            android:summary="@string/pref_lockscreen_timeout_summary">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.salvagemod.salvageparts"
-                android:targetClass="com.salvagemod.salvageparts.activities.LockscreenTimeoutActivity" />
-        </PreferenceScreen>
-
     </PreferenceCategory>
 
 </PreferenceScreen>
