@@ -42,8 +42,8 @@
 	android:title="@string/term_emu_title"
 	android:summary="@string/term_emu_sum">
 	<intent android:action="android.intent.action.MAIN"
-	    android:targetPackage="com.android.term"
-	    android:targetClass="com.android.term.Term" />
+	    android:targetPackage="jackpal.androidterm2"
+	    android:targetClass="jackpal.androidterm2.Term" />
     </PreferenceScreen>
 
 
