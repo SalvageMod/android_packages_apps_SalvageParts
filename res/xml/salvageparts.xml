@@ -4,6 +4,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:key="parent">
 
+  <!-- General parts -->
+    <PreferenceCategory
+        android:title="@string/parts_category">
+
     <!-- Interface Settings -->
     <PreferenceScreen
 	android:key="ui_settings"
@@ -42,9 +46,28 @@
 	android:title="@string/term_emu_title"
 	android:summary="@string/term_emu_sum">
 	<intent android:action="android.intent.action.MAIN"
-	    android:targetPackage="jackpal.androidterm2"
-	    android:targetClass="jackpal.androidterm2.Term" />
+	    android:targetPackage="com.android.term"
+	    android:targetClass="com.android.term.Term" />
     </PreferenceScreen>
 
+    </PreferenceCategory>
+
+  <!-- Device information category -->
+    <PreferenceCategory
+        android:title="@string/device_info_category">
+
+        <!-- Device Hostname -->
+        <com.salvagemod.salvageparts.preferences.HostnamePreference
+            android:key="device_hostname"
+            android:title="@string/device_hostname"
+            android:dialogTitle="@string/device_hostname"
+            android:positiveButtonText="@string/hostname_save"
+            android:negativeButtonText="@string/hostname_cancel"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:persistent="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
