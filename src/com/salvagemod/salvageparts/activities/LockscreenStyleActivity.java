@@ -123,7 +123,7 @@ public class LockscreenStyleActivity extends PreferenceActivity implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_CUSTOM_APP_TOGGLE, value ? 1 : 0);
             int lockscreenStyle = Settings.System.getInt(getContentResolver(),
-                    Settings.System.LOCKSCREEN_STYLE_PREF, 3);
+                    Settings.System.LOCKSCREEN_STYLE_PREF, 1);
             updateStylePrefs(lockscreenStyle);
             return true;
         } else if (preference == mRotaryUnlockDownToggle) {
