@@ -108,8 +108,8 @@
     <string name="changelog_error">Error loading changelog...</string>
     <string name="changelog_unknown">Unknown</string>
     <string name="changelog_version">Version</string>
-    <string name="nightly_title">SalvageMod Nightly</string>
-    <string name="nightly_disclaimer">You are running what is considered to be an unstable nightly build of SalvageMod. There may be bugs! Please dont report bugs for these builds.</string>
+    <string name="nightly_title">SalvageMod 1.3 stable</string>
+    <string name="nightly_disclaimer">You are running a stable release of SalvageMod. Visit Salvage-Mod.com for bug reports and support. </string>
     <string name="mod_info_main">About ROM</string>
     <string name="mod_info_header">Mod information</string>
     <string name="build_info_category">Build information</string>
