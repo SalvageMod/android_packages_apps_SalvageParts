@@ -177,4 +177,16 @@
     <string name="app_default_settings_title">Default application settings</string>
     <string name="parts_category">Extended parts</string>
 
+    <!-- SalvageMod Team Strings -->
+    <string name="the_team_preference">SalvageMod team</string>
+    <string name="the_team_title_subhead">Salvage-Mod Team</string>
+    <string name="dev_barnacles">barnacles10</string>
+    <string name="dev_echoside">Echoside</string>
+    <string name="dev_lithid">Lithid</string>
+    <string name="dev_barnacles_summary">Founder, developer</string>
+    <string name="dev_echoside_summary">Founder, developer</string>
+    <string name="dev_lithid_summary">Developer</string>
+    <string name="the_team_summary">Meet the development team</string>
+    <string name="supersonic_category">Supersonic maintainers</string>
+
 </resources>
