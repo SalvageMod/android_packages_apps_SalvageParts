@@ -1,0 +1,34 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.salvagemod.salvageparts"
+    android:title="@string/the_team_title_subhead"
+    android:key="parent">
+
+    <!-- SalvageMod Team - Supersonic -->
+    <PreferenceCategory android:key="general_category"
+        android:title="@string/supersonic_category">
+
+        <!-- Barnacles -->
+        <com.salvagemod.salvageparts.preferences.IconPreferenceScreen
+            settings:icon="@drawable/barnacles"
+            android:title="@string/dev_barnacles"
+            android:summary="@string/dev_barnacles_summary">
+        </com.salvagemod.salvageparts.preferences.IconPreferenceScreen>
+
+        <!-- Lithid -->
+        <com.salvagemod.salvageparts.preferences.IconPreferenceScreen
+            settings:icon="@drawable/lithid"
+            android:title="@string/dev_lithid"
+           android:summary="@string/dev_lithid_summary">
+        </com.salvagemod.salvageparts.preferences.IconPreferenceScreen>
+
+        <!-- Echoside -->
+        <com.salvagemod.salvageparts.preferences.IconPreferenceScreen
+            settings:icon="@drawable/echoside"
+            android:title="@string/dev_echoside"
+           android:summary="@string/dev_echoside_summary">>
+        </com.salvagemod.salvageparts.preferences.IconPreferenceScreen>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
