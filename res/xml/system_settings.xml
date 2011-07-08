@@ -30,15 +30,6 @@
                 android:targetClass="com.salvagemod.salvageparts.activities.ChangeLog" />
         </PreferenceScreen>
 
-        <!-- The Team-->
-        <PreferenceScreen
-            android:title="@string/the_team_preference"
-	    android:summary="@string/the_team_summary">
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.salvagemod.salvageparts"
-                android:targetClass="com.salvagemod.salvageparts.activities.SalvageTeamActivity" />
-        </PreferenceScreen>
-
     </PreferenceCategory>
 
 </PreferenceScreen>
