@@ -113,7 +113,7 @@
     <string name="mod_info_main">About ROM</string>
     <string name="mod_info_header">Mod information</string>
     <string name="build_info_category">Build information</string>
-    <string name="device_info_category">Device information</string>
+    <string name="development_info_category">Development Extras</string>
 
     <string name="cpu_settings_title">Performance settings</string>
     <string name="cpu_title">Performance settings</string>
@@ -176,6 +176,14 @@
 
     <string name="app_default_settings_title">Default application settings</string>
     <string name="parts_category">Extended parts</string>
+
+    <!--  Spare Parts Settings -->
+    <string name="spare_parts_title_head">SpareParts</string>
+    <string name="spare_parts_summary_head">Extra parts within android</string>
+
+    <!--  Development Settings -->
+    <string name="development_title_head">Development</string>
+    <string name="development_summary_head">Extra Development Settings</string>
 
     <!-- SalvageMod Team Strings -->
     <string name="the_team_preference">SalvageMod team</string>

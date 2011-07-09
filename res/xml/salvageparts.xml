@@ -39,6 +39,29 @@
             android:targetClass="com.salvagemod.salvageparts.activities.PerformanceActivity" />
     </PreferenceScreen>
 
+    </PreferenceCategory>
+
+  <!-- Device information category -->
+    <PreferenceCategory
+        android:title="@string/development_info_category">
+
+    <!-- Spare Parts -->
+    <PreferenceScreen
+        android:title="@string/spare_parts_title_head"
+        android:summary="@string/spare_parts_summary_head">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.spare_parts"
+            android:targetClass="com.android.spare_parts.SpareParts" />
+    </PreferenceScreen>
+
+    <!-- Development -->
+    <PreferenceScreen
+        android:title="@string/development_title_head"
+        android:summary="@string/development_summary_head">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.development"
+            android:targetClass="com.android.development.Development" />
+    </PreferenceScreen>
 
     <!-- Terminal Emulator -->
     <PreferenceScreen
@@ -49,12 +72,6 @@
 	    android:targetPackage="jackpal.androidterm2"
 	    android:targetClass="jackpal.androidterm2.Term" />
     </PreferenceScreen>
-
-    </PreferenceCategory>
-
-  <!-- Device information category -->
-    <PreferenceCategory
-        android:title="@string/device_info_category">
 
         <!-- Device Hostname -->
         <com.salvagemod.salvageparts.preferences.HostnamePreference
