@@ -113,7 +113,7 @@
     <string name="mod_info_main">About ROM</string>
     <string name="mod_info_header">Mod information</string>
     <string name="build_info_category">Build information</string>
-    <string name="development_info_category">Development Extras</string>
+    <string name="development_info_category">Development extras</string>
 
     <string name="cpu_settings_title">Performance settings</string>
     <string name="cpu_title">Performance settings</string>
