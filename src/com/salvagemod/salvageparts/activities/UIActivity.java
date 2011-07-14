@@ -89,7 +89,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 	/* Transparent drop down */
 	mUseTransparentStatusBar = (CheckBoxPreference)prefSet.findPreference(USE_TRANSPARENT_STATUSBAR);
 	mUseTransparentStatusBar.setChecked(Settings.System.getInt(getContentResolver(),
-	Settings.System.USE_TRANSPARENT_STATUSBAR, 1) == 1);
+	Settings.System.USE_TRANSPARENT_STATUSBAR, 0) == 1);
 
         /* Electron Beam control */
         boolean animateScreenLights = getResources().getBoolean(
