@@ -51,12 +51,16 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 
     private static final String ELECTRON_BEAM_ANIMATION_OFF = "electron_beam_animation_off";
 
+    private static final String USE_TRANSPARENT_STATUSBAR = "pref_use_transparent_statusbar";
+
     private ListPreference mOverscrollPref;
     private ListPreference mOverscrollWeightPref;
 
     private CheckBoxPreference mElectronBeamAnimationOn;
 
     private CheckBoxPreference mElectronBeamAnimationOff;
+
+    private CheckBoxPreference mUseTransparentStatusBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -82,6 +86,11 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
         mOverscrollWeightPref.setValue(String.valueOf(overscrollWeight));
         mOverscrollWeightPref.setOnPreferenceChangeListener(this);
 
+	/* Transparent drop down */
+	mUseTransparentStatusBar = (CheckBoxPreference)prefSet.findPreference(USE_TRANSPARENT_STATUSBAR);
+	mUseTransparentStatusBar.setChecked(Settings.System.getInt(getContentResolver(),
+	Settings.System.USE_TRANSPARENT_STATUSBAR, 1) == 1);
+
         /* Electron Beam control */
         boolean animateScreenLights = getResources().getBoolean(
                 com.android.internal.R.bool.config_animateScreenLights);
@@ -101,7 +110,7 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
 
 
    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-       boolean value;    
+       boolean value;
 
         if (preference == mElectronBeamAnimationOn) {
             value = mElectronBeamAnimationOn.isChecked();
@@ -114,7 +123,11 @@ public class UIActivity extends PreferenceActivity implements OnPreferenceChange
             Settings.System.putInt(getContentResolver(),
                     Settings.System.ELECTRON_BEAM_ANIMATION_OFF, value ? 1 : 0);
         }
-
+        if (preference == mUseTransparentStatusBar) {
+     	    value = mUseTransparentStatusBar.isChecked();
+	    Settings.System.putInt(getContentResolver(),
+		    Settings.System.USE_TRANSPARENT_STATUSBAR, value ? 1 : 0);
+	}
         return false;
     }
 
