@@ -29,6 +29,14 @@
             android:entryValues="@array/values_overscroll_weight" />
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/title_use_transparent_statusbar">
+    <CheckBoxPreference
+	    android:key="pref_use_transparent_statusbar"
+	    android:title="@string/title_use_transparent_statusbar"
+	    android:summaryOn="@string/summary_on_use_transparent_statusbar"
+    	    android:summaryOff="@string/summary_off_use_transparent_statusbar"
+    />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_electron_beam_title">
         <CheckBoxPreference android:key="electron_beam_animation_on"
             android:title="@string/pref_electron_beam_animation_on" />  

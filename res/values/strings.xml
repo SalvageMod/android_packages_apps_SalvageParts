@@ -197,4 +197,11 @@
     <string name="the_team_summary">Meet the development team</string>
     <string name="supersonic_category">Supersonic maintainers</string>
 
+    <!-- Notification background -->
+    <string name="title_use_transparent_statusbar">Notification background</string>
+    <string name="summary_on_use_transparent_statusbar">Notification background set to transparent (reboot required)</string>
+    <string name="summary_off_use_transparent_statusbar">Notification background set to opaque (reboot required)</string>
+
+
+
 </resources>
