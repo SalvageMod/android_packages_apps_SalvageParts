@@ -72,6 +72,7 @@
     <string name="title_toggle_airplane">Toggle Airplane mode</string>
     <string name="title_toggle_flashlight">Toggle LED flashlight</string>
     <string name="title_toggle_sleep">Go to sleep</string>
+    <string name="title_toggle_screenshot">Take screenshot</string>
     <string name="title_toggle_media_play_pause">Media: Toggle Play/Pause</string>
     <string name="title_toggle_media_previous">Media: Skip to Previous</string>
     <string name="title_toggle_media_next">Media: Skip to Next</string>
